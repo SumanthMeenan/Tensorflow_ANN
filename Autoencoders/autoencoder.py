@@ -10,7 +10,7 @@ encoding_dim = 500
 input_img = Input(shape = (784,))
 encoded = Dense(encoding_dim, activation='relu')(input_img)
 decoded = Dense(784, activation='sigmoid')(encoded)
-autoencoder = Model(input_img, decoded)
+autoencoder = Model(input_img, decoded) 
 
 encoder = Model(input_img, encoded) 
 encoded_input = Input(shape = (encoding_dim, ))
@@ -49,4 +49,4 @@ plt.show()
 #batch size is 256, for every epoch 235 is the number of steps;
 # number of steps = total images / batch size
 # 235 = n / 256
-# n = 256 * 235
+# n = 256 * 235 
